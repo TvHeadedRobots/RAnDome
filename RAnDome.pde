@@ -47,7 +47,7 @@ void draw() {
     columnVals = m.getColValues(i);
     
     // do stuff
-    noiseSrc = int(map(noise(PI, cntr), 0, 1, 1, 255)); // generate a random value between 1 & 255 using the Perlin noise generator
+    noiseSrc = int(map(noise(PI, columnVals), 0, 1, 1, 255)); // generate a random value between 1 & 255 using the Perlin noise generator
     ledNoise = noise(float(rowVals), cntr); // generate another random value for the LED brightness
     rB = byte(noiseSrc); // make the random byte to set the monome row value
     m.setRow(i, rB); // set monome row value
